@@ -4,7 +4,7 @@
 /* import { Home } from "./components/homes_components/Home"; */
 /* import { Log } from "./components/logIn_components/Log"; */
 /* import { LogIn } from "./components/logIn_components/LogIn"; */
-import { NavBar } from "./NavBar";
+import { NavBar } from "./components/Navbar/NavBar";
 
 
 const App = () => {

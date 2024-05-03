@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Home } from "./components/Home/Home";
-import { LogIn } from "./components/logIn_components/LogIn";
+import { Home } from "../Home/Home";
+import { LogIn } from "../logIn_components/LogIn";
 
 const Register = () => <h1>Register Page</h1>;
 
