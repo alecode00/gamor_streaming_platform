@@ -1,13 +1,19 @@
-import { MainBoardLeft } from "./home_components/MainBoardLeft";
+import { MainBoardLeft } from "./home_mainBoard_components/MainBoardLeft";
+import { MainBoardCenter } from "./home_mainBoard_components/MainBoardCenter";
+import { MainBoardRight } from "./home_mainBoard_components/MainBoardRight";
+import { TrendingCategories } from "./home_trending_categories_components/TrendingCategories";
 
 export const Home = () => {
   return (
     <>
-      <MainBoardLeft />
-      <div className="mainBoard center">
-        
-      </div>
-      <div className="mainBoard right"></div>
+      <section className="mainBoard" >
+        <MainBoardLeft />
+        <MainBoardCenter />
+        <MainBoardRight />
+      </section>
+      <section className="trendingCategories" >
+        <TrendingCategories />
+      </section>
     </>
   );
 };
