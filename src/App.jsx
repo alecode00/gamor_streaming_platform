@@ -1,4 +1,4 @@
-import "./App.css";
+/* import "./App.css"; */
 /* import { useState } from "react"; */
 /* import { Link, BrowserRouter } from "react-router"; */
 /* import { Home } from "./components/homes_components/Home"; */
@@ -13,7 +13,9 @@ const App = () => {
 
   return (
     <>
+    <div>
       <NavBar />
+    </div>
     </>
   );
 };
