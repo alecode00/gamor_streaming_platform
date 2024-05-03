@@ -3,14 +3,17 @@ import { useState } from "react";
 
 const usersBox = [
   {
-    email: "alcolla000419@gmail.com",
-    password: "automatica2905",
+    username: "KDBPrime",
+    email: "inge000419@gmail.com",
+    password: "pueblo",
   },
   {
+    username: "LM10Prime",
     email: "alcolla190400@gmail.com",
     password: "guatemala",
   },
   {
+    username: "CR7Prime",
     email: "dorturtur000419@gmail.com",
     password: "cacerola",
   },
@@ -41,8 +44,9 @@ export const LogIn = () => {
     setIsTry(true);
     usersBox.forEach((user) => {
       if (
-        event.target[0].value === user.email &&
-        event.target[1].value === user.password
+        event.target[0].value === user.username&&
+        event.target[1].value === user.email &&
+        event.target[2].value === user.password 
       ) {
         setIsLogin(true);
       }
@@ -56,6 +60,12 @@ export const LogIn = () => {
         <div className='space space-2' ></div>
         <div className='space space-3' ></div> */}
         <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Enter your username"
+            type="text"
+            name="text"
+            id="text"
+          />
           <input
             placeholder="Enter your email"
             type="email"
