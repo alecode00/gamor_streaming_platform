@@ -8,7 +8,7 @@ const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
 let gamesNames;
-let message;
+let message = 'No hay ningun elemento';
 export const MainBoardRight = ({ category }) => {
   MainBoardRight.propTypes = {
     category: PropTypes.string,
@@ -16,7 +16,7 @@ export const MainBoardRight = ({ category }) => {
 
   const [search, setSearch] = useState("");
   const [platform, setPlatform] = useState("PC");
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState([]); //obligado aqui
   const [arrayShowed, setArrayShowed] = useState([]);
   const [isElement, setIsElement] = useState();
 
@@ -28,14 +28,14 @@ export const MainBoardRight = ({ category }) => {
   //Cambiando la plataforma-----------------------------------
   const handleSelectPlatform = (event) => {
     event.preventDefault();
-    if (event.target.id === 'PC') {
-      setPlatform('PC')
-    } else if (event.target.id === 'PS4') {
-      setPlatform('PS4')
-    } else if (event.target.id === 'XBOX') {
-      setPlatform('XBOX')
+    if (event.target.id === "PC") {
+      setPlatform("PC");
+    } else if (event.target.id === "PS4") {
+      setPlatform("PS4");
+    } else if (event.target.id === "XBOX") {
+      setPlatform("XBOX");
     }
-  }
+  };
 
   //Consumiendo la API de juegos---------------------------------
   const fetchGames = async () => {
@@ -51,70 +51,49 @@ export const MainBoardRight = ({ category }) => {
   useEffect(() => {
     fetchGames();
   }, []);
+  const handleIsElement = (is) => {
+    setIsElement(is);
+  };
 
-  //Manejando el buscador--------------------------------------------
-  const handleSearchNow = () => {
-    console.log(games);
-    console.log(`game[0].name${games[0].name}`);
-    console.log(`search:${search}`);
-
-    for(let i=0;i<games.length;i++){
-      if(games[i].name === search &&
-        games[i].parent_platforms[0].platform.name === platform &&
-        games[i].genres[0].name === category &&  i===0){
-        setArrayShowed([games[i].name]);
-      console.log('Estoy asignando arrayShoewed:')
-
-        setIsElement(true);
-        console.log(`isElement: es ${isElement}`)
-
-      } else if(games[i].name === search &&
-        games[i].parent_platforms[0].platform.name === platform &&
-        games[i].genres[0].name === category){
-        setArrayShowed([...arrayShowed,games[i].name]);
-      console.log('Estoy asignando arrayShoewed:')
-
-        setIsElement(true);
-      console.log(`isElement: es ${isElement}`)
-
-      } else{
-        message="No hay ningun juego que coincida con su busqueda";
-        setIsElement(false);
-      }
-    }
-
-    console.log(`arrayShowed:${arrayShowed}`);
-    console.log("El boton fue tocado");
-    /* if (isElement) {
-      console.log('Estoy en isElement:')
-      gamesNames = arrayShowed[0];
+  const handleArrayShowed = (name) => {
+    setArrayShowed(name);
+  };
+  useEffect(() => {
+    if (isElement) {
+      console.log("Estoy en isElement:");
+      gamesNames = gamesNames = (
+        <>
+          <span>
+            <p>{arrayShowed[0]}</p>
+            <button>+</button>
+          </span>
+        </>
+      );
       console.log(`gamesNames: ${gamesNames}`);
-    } else{
+    } else {
       gamesNames = message;
       console.log(`gamesNames: ${gamesNames}`);
-    } */
-    gamesNames = (
-    <>
-    <span>
-    <p>
-      {arrayShowed[0]}
-    </p>
-    <button>+</button>
-    </span>
-    </>
-    )
+    }
+  }, [arrayShowed]);
 
-  };
   //OUTPUT
   return (
     <>
       <div className="mainBoard right">
         <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
-        
+
         <section>
           <Searcher search={search} handleOnChange={handleOnChange} />
-              {gamesNames}
-          <SButton handleSearchNow={handleSearchNow} />
+          {gamesNames}
+          <SButton
+            arrayShowed={arrayShowed}
+            handleIsElement={handleIsElement}
+            handleArrayShowed={handleArrayShowed}
+            category={category}
+            games={games}
+            platform={platform}
+            search={search}
+          />
         </section>
       </div>
     </>
