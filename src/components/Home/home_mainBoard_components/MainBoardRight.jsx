@@ -48,19 +48,22 @@ export const MainBoardRight = () => {
   //Manejando el buscador
   const handleSearchNow = () => {
     console.log(games);
-    console.log(`game[0].name${games[0].name}`)
+    console.log(`game[0].name${games[0].name}`);
     console.log(`search:${search}`);
 
-    let arrayShowedb = games.filter((game) => 
-      game.name === search && game.parent_platforms[0].platform.name === platform /* && game.genres[0].name === category */
+    let arrayShowedb = games.filter(
+      (game) =>
+        game.name === search &&
+        game.parent_platforms[0].platform.name ===
+          platform /* && game.genres[0].name === category */
     );
 
     setArrayShowed([arrayShowedb[0].name]);
     console.log(`arrayShowed:${arrayShowed}`);
     console.log("El boton fue tocado");
     // gamesNames = arrayShowed.map((item) => item);
-    for (let i=0; i< arrayShowed.length; i+=1){
-      gamesNames =arrayShowed[i]
+    for (let i = 0; i < arrayShowed.length; i += 1) {
+      gamesNames = arrayShowed[i];
     }
     console.log(gamesNames);
   };
