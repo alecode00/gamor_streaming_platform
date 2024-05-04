@@ -1,17 +1,18 @@
-import { useState } from "react";
+/* import { useState } from "react"; */
 import { Home } from "../Home/Home";
 import { LogIn } from "../logIn_components/LogIn";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 const Register = () => <h1>Register Page</h1>;
 
 export const NavBar = () => {
-  const [page, setPage] = useState(() => {
+  /* const [page, setPage] = useState(() => {
     const { pathname } = window.location;
     const page = pathname.slice(1);
     return page;
-  });
+  }); */
 
-  const getContent = () => {
+  /* const getContent = () => {
     if (page === "log") {
       return <LogIn />;
     } else if (page === "register") {
@@ -19,13 +20,13 @@ export const NavBar = () => {
     } else {
       return <Home />;
     }
-  };
+  }; */
 
-  const toPage = (nextpage) => (event) => {
+  /* const toPage = (nextpage) => (event) => {
     history.pushState(null, "", `/${nextpage}`);
     event.preventDefault();
     setPage(nextpage);
-  };
+  }; */
 
   const handleFalseLink = (event) => {
     event.preventDefault();
@@ -34,10 +35,11 @@ export const NavBar = () => {
   return (
     <>
       <header>
+        <BrowserRouter >
         <section>
-          <a href="/" onClick={toPage("home")}>
+          <NavLink to="/" /* onClick={toPage("home")} */>
             Home
-          </a>
+          </NavLink>
           <a href="#" onClick={handleFalseLink}>
             Streams
           </a>
@@ -53,15 +55,22 @@ export const NavBar = () => {
           <p>Gamor</p>
         </section>
         <section>
-          <a href="/log" onClick={toPage("log")}>
+          <NavLink to="/log" /* onClick={toPage("log")} */>
             Log
-          </a>
-          <a href="/register" onClick={toPage("register")}>
+          </NavLink>
+          <NavLink to="/register" /* onClick={toPage("register")} */>
             Register
-          </a>
+          </NavLink>
         </section>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/log" element={<LogIn />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+        </BrowserRouter >
+
       </header>
-      {getContent()}
+      {/* {getContent()} */}
     </>
   );
 };
