@@ -7,8 +7,6 @@ import { SButton } from "./main_board_right_components/SButton";
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
-let gamesNames;
-let message = 'No hay ningun elemento';
 export const MainBoardRight = ({ category }) => {
   MainBoardRight.propTypes = {
     category: PropTypes.string,
@@ -18,7 +16,7 @@ export const MainBoardRight = ({ category }) => {
   const [platform, setPlatform] = useState("PC");
   const [games, setGames] = useState([]); //obligado aqui
   const [arrayShowed, setArrayShowed] = useState([]);
-  const [isElement, setIsElement] = useState();
+  const [isElement, setIsElement] = useState(true);
 
   //Cambiando la busqueda---------------------------------------
   const handleOnChange = (event) => {
@@ -51,31 +49,13 @@ export const MainBoardRight = ({ category }) => {
   useEffect(() => {
     fetchGames();
   }, []);
-  const handleIsElement = (is) => {
-    setIsElement(is);
+  const handleIsElement = (i) => {
+    setIsElement(i);
   };
 
   const handleArrayShowed = (name) => {
     setArrayShowed(name);
   };
-  useEffect(() => {
-    if (isElement) {
-      console.log("Estoy en isElement:");
-      gamesNames = gamesNames = (
-        <>
-          <span>
-            <p>{arrayShowed[0]}</p>
-            <button>+</button>
-          </span>
-        </>
-      );
-      console.log(`gamesNames: ${gamesNames}`);
-    } else {
-      gamesNames = message;
-      console.log(`gamesNames: ${gamesNames}`);
-    }
-  }, [arrayShowed]);
-
   //OUTPUT
   return (
     <>
@@ -84,7 +64,8 @@ export const MainBoardRight = ({ category }) => {
 
         <section>
           <Searcher search={search} handleOnChange={handleOnChange} />
-          {gamesNames}
+          {/* {gamesNames} */}
+          <br />
           <SButton
             arrayShowed={arrayShowed}
             handleIsElement={handleIsElement}
