@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
+import { PlatformSelector } from "./main_board_right_components/PlatformSelector";
 
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
@@ -15,21 +16,6 @@ export const MainBoardRight = ({ category }) => {
   const [games, setGames] = useState([]);
   const [arrayShowed, setArrayShowed] = useState([]);
   const [platform, setPlatform] = useState("PC");
-  /* const [category, setCategory] = useState(""); */
-
-  //Cambiando la plataforma
-  const handleSelectPlatformPC = (event) => {
-    event.preventDefault();
-    setPlatform("PC");
-  };
-  const handleSelectPlatformPS4 = (event) => {
-    event.preventDefault();
-    setPlatform("PS4");
-  };
-  const handleSelectPlatformXBOX = (event) => {
-    event.preventDefault();
-    setPlatform("XBOX");
-  };
 
   //Cambiando la busqueda
   const handleOnChange = (event) => {
@@ -41,6 +27,7 @@ export const MainBoardRight = ({ category }) => {
     try {
       const response = await fetch(`${url_base}?key=${API_KEY}`);
       const data = await response.json();
+      console.log(`data.results: ${data.results}`);
       setGames(data.results);
     } catch (error) {
       console.error(error);
@@ -76,19 +63,7 @@ export const MainBoardRight = ({ category }) => {
   return (
     <>
       <div className="mainBoard right">
-        <section>
-          <p>01. </p>
-          <h3>Choose Platform</h3>
-          <a href="#" onClick={handleSelectPlatformPC}>
-            PC
-          </a>
-          <a href="#" onClick={handleSelectPlatformPS4}>
-            PS4
-          </a>
-          <a href="#" onClick={handleSelectPlatformXBOX}>
-            XBOX
-          </a>
-        </section>
+        <PlatformSelector setPlatform={setPlatform} />
         <section>
           <p>02. </p>
           <h3>Searching Game</h3>

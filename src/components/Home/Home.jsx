@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const Home = () => {
 
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("Action")
   
   const handleChangeCategory = (newCategory) =>{
     setCategory(newCategory);
