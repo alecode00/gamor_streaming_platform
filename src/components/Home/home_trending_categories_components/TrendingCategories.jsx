@@ -9,6 +9,28 @@ export const TrendingCategories = ({handleChangeCategory}) => {
   const handleAsignAction = () =>{
     handleChangeCategory("Action");
   }
+  const handleAsignSports = () =>{
+    handleChangeCategory("Sports");
+  }
+  const handleAsignAdventure = () =>{
+    handleChangeCategory("Adventure");
+  }
+  const handleAsignArcade = () =>{
+    handleChangeCategory("Arcade");
+  }
+  const handleAsignFantasy = () =>{
+    handleChangeCategory("Fantasy");
+  }
+  const handleAsignStrategy = () =>{
+    handleChangeCategory("Strategy");
+  }
+  const handleAsignShooter = () =>{
+    handleChangeCategory("Shooter");
+  }
+  const handleAsignAll = () =>{
+    handleChangeCategory("All");
+  }
+  
 
   return (
     <>
@@ -21,49 +43,49 @@ export const TrendingCategories = ({handleChangeCategory}) => {
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignSports} >
           <div>
             <p>/2</p>
             <h4>Sports Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignAdventure} >
           <div>
             <p>/3</p>
-            <h4>adventure Games</h4>
+            <h4>Adventure Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignArcade} >
           <div>
             <p>/4</p>
             <h4>Arcade Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignFantasy} >
           <div>
             <p>/5</p>
             <h4>Fantasy Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignStrategy} >
           <div>
             <p>/6</p>
             <h4>Strategy Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignShooter} >
           <div>
             <p>/7</p>
             <h4>Shooter Games</h4>
           </div>
         </button>
 
-        <button>
+        <button onClick={handleAsignAll} >
           <div>
             <p>View All</p>
             <h4>All Categories</h4>
