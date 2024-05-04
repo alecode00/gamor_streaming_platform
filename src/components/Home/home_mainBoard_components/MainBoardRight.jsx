@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import { PropTypes } from "prop-types";
 
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
 let gamesNames = <></>;
 
-export const MainBoardRight = () => {
+export const MainBoardRight = ({ category }) => {
+  MainBoardRight.propTypes = {
+    category: PropTypes.string,
+  };
+
   const [search, setSearch] = useState("");
   const [games, setGames] = useState([]);
   const [arrayShowed, setArrayShowed] = useState([]);
@@ -54,8 +59,8 @@ export const MainBoardRight = () => {
     let arrayShowedb = games.filter(
       (game) =>
         game.name === search &&
-        game.parent_platforms[0].platform.name ===
-          platform /* && game.genres[0].name === category */
+        game.parent_platforms[0].platform.name === platform &&
+        game.genres[0].name === category
     );
 
     setArrayShowed([arrayShowedb[0].name]);
