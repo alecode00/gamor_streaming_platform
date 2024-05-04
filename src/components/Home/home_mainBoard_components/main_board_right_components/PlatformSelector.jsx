@@ -1,36 +1,24 @@
 import { PropTypes } from "prop-types";
 
-export const PlatformSelector = ({ setPlatform }) => {
+export const PlatformSelector = ({ handleSelectPlatform }) => {
   PlatformSelector.propTypes = {
-    setPlatform: PropTypes.func,
+    handleSelectPlatform: PropTypes.func,
   };
 
-  //Cambiando la plataforma
-  const handleSelectPlatformPC = (event) => {
-    event.preventDefault();
-    setPlatform("PC");
-  };
-  const handleSelectPlatformPS4 = (event) => {
-    event.preventDefault();
-    setPlatform("PS4");
-  };
-  const handleSelectPlatformXBOX = (event) => {
-    event.preventDefault();
-    setPlatform("XBOX");
-  };
+ 
 
   return (
     <>
       <section>
         <p>01. </p>
         <h3>Choose Platform</h3>
-        <a href="#" onClick={handleSelectPlatformPC}>
+        <a id="PC" href="#" onClick={handleSelectPlatform}>
           PC
         </a>
-        <a href="#" onClick={handleSelectPlatformPS4}>
+        <a id="PS4" href="#" onClick={handleSelectPlatform}>
           PS4
         </a>
-        <a href="#" onClick={handleSelectPlatformXBOX}>
+        <a id="XBOX" href="#" onClick={handleSelectPlatform}>
           XBOX
         </a>
       </section>

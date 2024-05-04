@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import { PlatformSelector } from "./main_board_right_components/PlatformSelector";
-
+import { Searcher } from "./main_board_right_components/Searcher";
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
@@ -13,16 +13,28 @@ export const MainBoardRight = ({ category }) => {
   };
 
   const [search, setSearch] = useState("");
+  const [platform, setPlatform] = useState("PC");
   const [games, setGames] = useState([]);
   const [arrayShowed, setArrayShowed] = useState([]);
-  const [platform, setPlatform] = useState("PC");
 
-  //Cambiando la busqueda
+  //Cambiando la busqueda---------------------------------------
   const handleOnChange = (event) => {
     setSearch(event.target.value);
   };
 
-  //Consumiendo la API de juegos
+  //Cambiando la plataforma-----------------------------------
+  const handleSelectPlatform = (event) => {
+    event.preventDefault();
+    if (event.target.id === 'PC') {
+      setPlatform('PC')
+    } else if (event.target.id === 'PS4') {
+      setPlatform('PS4')
+    } else if (event.target.id === 'XBOX') {
+      setPlatform('XBOX')
+    }
+  }
+
+  //Consumiendo la API de juegos---------------------------------
   const fetchGames = async () => {
     try {
       const response = await fetch(`${url_base}?key=${API_KEY}`);
@@ -37,7 +49,7 @@ export const MainBoardRight = ({ category }) => {
     fetchGames();
   }, []);
 
-  //Manejando el buscador
+  //Manejando el buscador--------------------------------------------
   const handleSearchNow = () => {
     console.log(games);
     console.log(`game[0].name${games[0].name}`);
@@ -63,16 +75,12 @@ export const MainBoardRight = ({ category }) => {
   return (
     <>
       <div className="mainBoard right">
-        <PlatformSelector setPlatform={setPlatform} />
+        <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
+        {console.log(platform)}
         <section>
-          <p>02. </p>
-          <h3>Searching Game</h3>
-          <input
-            type="text"
-            placeholder="Search"
-            value={search}
-            onChange={handleOnChange}
-          />
+          <Searcher search={search} handleOnChange={handleOnChange} />
+        {console.log(search)}
+
           <div>
             {/*Aqui debe ir un map, mostrando los juegos traidos*/}
             {gamesNames}
