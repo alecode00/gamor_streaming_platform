@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_KEY = "b84394dc8aa64b01a9a1fdcc26a1d6a8";
+const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
 let gamesNames = <></>;
@@ -50,9 +50,9 @@ export const MainBoardRight = () => {
     console.log(games);
     console.log(`game[0].name${games[0].name}`)
     console.log(`search:${search}`);
-    //Aqui va el filter buscando los juegos que coincidan en categoria, platform y name.----------------
-    let arrayShowedb = games.filter(game => 
-      game.name == search /* && game.parent_platforms[0].platform.name === platform;&& game.genres[0].name === category */
+
+    let arrayShowedb = games.filter((game) => 
+      game.name === search && game.parent_platforms[0].platform.name === platform /* && game.genres[0].name === category */
     );
 
     setArrayShowed([arrayShowedb[0].name]);
