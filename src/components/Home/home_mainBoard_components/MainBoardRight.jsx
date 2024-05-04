@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import { PlatformSelector } from "./main_board_right_components/PlatformSelector";
 import { Searcher } from "./main_board_right_components/Searcher";
+import { SButton } from "./main_board_right_components/SButton";
+
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
 
-let gamesNames = <></>;
-
+let gamesNames;
+let message;
 export const MainBoardRight = ({ category }) => {
   MainBoardRight.propTypes = {
     category: PropTypes.string,
@@ -16,6 +18,7 @@ export const MainBoardRight = ({ category }) => {
   const [platform, setPlatform] = useState("PC");
   const [games, setGames] = useState([]);
   const [arrayShowed, setArrayShowed] = useState([]);
+  const [isElement, setIsElement] = useState();
 
   //Cambiando la busqueda---------------------------------------
   const handleOnChange = (event) => {
@@ -55,37 +58,63 @@ export const MainBoardRight = ({ category }) => {
     console.log(`game[0].name${games[0].name}`);
     console.log(`search:${search}`);
 
-    let arrayShowedb = games.filter(
-      (game) =>
-        game.name === search &&
-        game.parent_platforms[0].platform.name === platform &&
-        game.genres[0].name === category
-    );
+    for(let i=0;i<games.length;i++){
+      if(games[i].name === search &&
+        games[i].parent_platforms[0].platform.name === platform &&
+        games[i].genres[0].name === category &&  i===0){
+        setArrayShowed([games[i].name]);
+      console.log('Estoy asignando arrayShoewed:')
 
-    setArrayShowed([arrayShowedb[0].name]);
+        setIsElement(true);
+        console.log(`isElement: es ${isElement}`)
+
+      } else if(games[i].name === search &&
+        games[i].parent_platforms[0].platform.name === platform &&
+        games[i].genres[0].name === category){
+        setArrayShowed([...arrayShowed,games[i].name]);
+      console.log('Estoy asignando arrayShoewed:')
+
+        setIsElement(true);
+      console.log(`isElement: es ${isElement}`)
+
+      } else{
+        message="No hay ningun juego que coincida con su busqueda";
+        setIsElement(false);
+      }
+    }
+
     console.log(`arrayShowed:${arrayShowed}`);
     console.log("El boton fue tocado");
-    // gamesNames = arrayShowed.map((item) => item);
-    for (let i = 0; i < arrayShowed.length; i += 1) {
-      gamesNames = arrayShowed[i];
-    }
-    console.log(gamesNames);
+    /* if (isElement) {
+      console.log('Estoy en isElement:')
+      gamesNames = arrayShowed[0];
+      console.log(`gamesNames: ${gamesNames}`);
+    } else{
+      gamesNames = message;
+      console.log(`gamesNames: ${gamesNames}`);
+    } */
+    gamesNames = (
+    <>
+    <span>
+    <p>
+      {arrayShowed[0]}
+    </p>
+    <button>+</button>
+    </span>
+    </>
+    )
+
   };
   //OUTPUT
   return (
     <>
       <div className="mainBoard right">
         <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
-        {console.log(platform)}
+        
         <section>
           <Searcher search={search} handleOnChange={handleOnChange} />
-        {console.log(search)}
-
-          <div>
-            {/*Aqui debe ir un map, mostrando los juegos traidos*/}
-            {gamesNames}
-            <button onClick={handleSearchNow}>Search Now</button>
-          </div>
+              {gamesNames}
+          <SButton handleSearchNow={handleSearchNow} />
         </section>
       </div>
     </>

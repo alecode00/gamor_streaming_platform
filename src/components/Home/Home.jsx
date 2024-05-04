@@ -20,6 +20,7 @@ export const Home = () => {
         <MainBoardRight category={category} />
       </section>
       <section className="trendingCategories" >
+        {/* Es mejorable el TrendingCategories. Dejar solo una func con un switch dentro, viendo los id de los buttons */}
         <TrendingCategories handleChangeCategory={handleChangeCategory} />
         {console.log(`La categoria seleccionada es: ${category}`)}
       </section>
