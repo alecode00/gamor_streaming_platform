@@ -1,18 +1,20 @@
 :root {
-  margin: 0;
-  padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --color-black: black;
+  --color-black: #1a1a1a;
   --color-hard-black: #202020;
-  --color-medium-black: #404040;
-  --color-easy-black: #959595;
+  --color-medium-black: #303030;
+  --color-medium2-black: #454545;
+  --color-easy-black: #656565;
   --color-coral: rgb(255, 90, 29);
   --color-white: white;
+  --color-purple:rgb(148, 42, 148);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   color: var(--color-white);
   min-width: 320px;
   min-height: 100vh;

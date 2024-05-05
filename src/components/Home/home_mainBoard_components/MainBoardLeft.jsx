@@ -1,8 +1,9 @@
+
+
 export const MainBoardLeft = () => {
   const handleFalseLink = (event) => {
     event.preventDefault();
   };
-
   return (
     <>
       <div>
@@ -10,15 +11,18 @@ export const MainBoardLeft = () => {
         <h1 id="reverse">streaming</h1>
         <h1>games</h1>
         <h1>differently</h1>
-        <h5>
-          gamor now has <p id="resaltado">stream party</p> platform
-        </h5>
-        <a href="#" onClick={handleFalseLink}>
+        <p>
+          gamor now has  <b>stream party</b> platform
+        </p>
+        <div>
+
+        <a href="#" id="register" onClick={handleFalseLink}>
           Create account
         </a>
-        <a href="#" onClick={handleFalseLink}>
+        <a href="#" id="log" onClick={handleFalseLink}>
           Sign In
         </a>
+        </div>
       </div>
     </>
   );
