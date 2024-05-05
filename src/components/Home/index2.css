@@ -1,0 +1,37 @@
+/* body {
+  --bg-color: #ff6961;
+  --text-color: black;
+  --content: "no compatible";
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body::after {
+  content: var(--content);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --bg-color: white;
+    --text-color: black;
+    content: "light version";
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #242424;
+    --text-color: white;
+    --content: "dark version";
+  }
+} */
+
+
+.dark{
+background-color: #242424;
+color: white;
+}
+.light{
+background-color: white;
+color: #242424;
+}
