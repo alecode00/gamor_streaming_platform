@@ -8,9 +8,6 @@ import { NavBar } from "./components/Navbar/NavBar";
 
 
 const App = () => {
-  
-  
-
   return (
     <>
     <div>
