@@ -5,14 +5,15 @@
   line-height: 1.5;
   font-weight: 400;
   --color-black: black;
-  --color-hard-black: #101010;
-  --color-medium-black: #202020;
+  --color-hard-black: #202020;
+  --color-medium-black: #404040;
   --color-easy-black: #959595;
-  --color-coral: coral;
+  --color-coral: rgb(255, 90, 29);
   --color-white: white;
 }
 
 body {
+  color: var(--color-white);
   min-width: 320px;
   min-height: 100vh;
 }

@@ -1,5 +1,5 @@
 header {
-  background-color: var(--color-medium-black);
+  background-color: var(--color-hard-black);
   padding: 3%;
 }
 .containerHeader {
@@ -84,12 +84,4 @@ section {
   #register:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
-
-  /* #themeButton{
-        padding: 2.5% 2.5%;
-        margin: 2.5%;
-        background-color: var(--color-medium-black);
-        border-radius: 20px;
-        border: 1px solid var(--color-easy-black);
-    } */
 }

@@ -59,7 +59,7 @@ export const MainBoardRight = ({ category }) => {
   //OUTPUT
   return (
     <>
-      <div className="mainBoard right">
+      <div>
         <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
 
         <section>

@@ -5,7 +5,7 @@ export const MainBoardLeft = () => {
 
   return (
     <>
-      <div className="mainBoard left">
+      <div>
         <h1>start</h1>
         <h1 id="reverse">streaming</h1>
         <h1>games</h1>
