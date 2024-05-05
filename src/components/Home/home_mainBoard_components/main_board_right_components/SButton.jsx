@@ -30,14 +30,14 @@ export const SButton = ({
       if (
         games[i].name === search &&
         games[i].parent_platforms[0].platform.name === platform &&
-        games[i].genres[0].name === category &&
-        i === 0
+        games[i].genres[0].name === category /* &&
+        i === 0 */
       ) {
         handleArrayShowed([games[i].name]);
         console.log("Estoy asignando arrayShoewed:");
 
         handleIsElement(true);
-      } else if (
+      } /* else if (
         games[i].name === search &&
         games[i].parent_platforms[0].platform.name === platform &&
         games[i].genres[0].name === category
@@ -46,7 +46,7 @@ export const SButton = ({
         console.log("Estoy asignando arrayShoewed:");
 
         handleIsElement(true);
-      } else {
+      } */ else {
         handleIsElement(false);
       }
     }
