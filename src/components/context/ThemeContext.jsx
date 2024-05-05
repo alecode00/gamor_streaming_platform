@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import { PropTypes } from "prop-types";
 const ThemeContext = createContext();
 
-const initialTheme = "light";
+const initialTheme = "dark";
 
 export const ThemeProvider = ({ children }) => {
   ThemeProvider.propTypes = {

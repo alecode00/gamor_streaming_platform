@@ -1,3 +1,95 @@
-.containerHeader{
-    display: flex;
+header {
+  background-color: var(--color-medium-black);
+  padding: 3%;
+}
+.containerHeader {
+  display: flex;
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: var(--color-easy-black);
+    text-underline-offset: 2px;
+    transition: text-underline-offset 0.75s;
+  }
+  a:hover {
+    text-decoration: 3px solid underline var(--color-coral);
+    text-underline-position: under;
+    text-underline-offset: 10px;
+  }
+}
+section {
+  width: 33%;
+  a.active {
+    color: var(--color-coral);
+  }
+}
+.containerHeaderLeft {
+  display: flex;
+  align-items: center;
+  a {
+    padding: 5% 2.5%;
+  }
+}
+.containerHeaderCenter {
+  text-align: center;
+}
+.containerHeaderRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    color: var(--color-white);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: var(--color-coral);
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  a {
+    padding: 2.5% 2.5%;
+    color: var(--color-white);
+    margin: 2.5%;
+  }
+  #register {
+    /* background-color: var(--color-medium-black);
+    border-radius: 20px;
+    border: 1px solid var(--color-easy-black); */
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  #register:hover {
+    border-color: var(--color-coral);
+    text-decoration: none;
+  }
+  #register:focus,
+  #register:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  /* #themeButton{
+        padding: 2.5% 2.5%;
+        margin: 2.5%;
+        background-color: var(--color-medium-black);
+        border-radius: 20px;
+        border: 1px solid var(--color-easy-black);
+    } */
 }

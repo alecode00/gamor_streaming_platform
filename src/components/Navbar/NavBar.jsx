@@ -25,9 +25,9 @@ export const NavBar = () => {
     <>
       <header>
         <BrowserRouter>
-          <div className="containerHeader">
-            <section>
-              <NavLink to="/">Home</NavLink>
+          <div className='containerHeader'>
+            <section className="containerHeaderLeft" >
+              <NavLink className={({isActive}) => (isActive? "active":null)} to="/">Home</NavLink>
               <a href="#" onClick={handleFalseLink}>
                 Streams
               </a>
@@ -39,13 +39,13 @@ export const NavBar = () => {
               </a>
             </section>
 
-            <section>
-              <p>Gamor</p>
+            <section className="containerHeaderCenter">
+              <h3>Gamor</h3>
             </section>
-            <section>
-              <NavLink to="/log">Log</NavLink>
-              <NavLink to="/register">Register</NavLink>
-              <button onClick={handleOnClick}>
+            <section className="containerHeaderRight">
+              <NavLink className={({isActive}) =>(isActive? "active":null)} to="/log">Sign in</NavLink>
+              <NavLink id="register" className={({isActive}) =>(isActive? "active":null)} to="/register">Create account</NavLink>
+              <button id="themeButton" onClick={handleOnClick}>
                 {theme == "light" ? "Dark Mode" : "Light Mode"}
               </button>
             </section>
@@ -57,7 +57,6 @@ export const NavBar = () => {
           </Routes>
         </BrowserRouter>
       </header>
-      {/* {getContent()} */}
     </>
   );
 };
