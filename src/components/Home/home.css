@@ -92,74 +92,99 @@ section {
   text-align: center;
 }
 .mainBoardRight {
-  display: grid;
-  justify-content: center;
-  padding: 2%;
-  section {
-    display: grid;
+  display: flex;
+  flex-direction: column;
+  .platform {
+    height: 50%;
   }
-  h3 {
-    color: var(--color-easy-black);
-    display: inline;
+  .choose {
+    display: flex;
+    h3 {
+      color: var(--color-easy-black);
+    }
+    h4 {
+      margin-left: 2%;
+    }
   }
-  h4 {
-    display: inline;
+  .platform {
+    padding: 10%;
+    height: 20%;
   }
   .platforms_container {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
     background-color: var(--color-hard-black);
     border-radius: 20px;
     a {
-      margin: 10px;
+      width: 30%;
+      text-align: center;
       padding: 10px 20px;
       text-decoration: none;
       color: var(--color-white);
     }
     a:hover {
+      text-align: center;
       background-color: var(--color-medium2-black);
       border-radius: 20px;
     }
   }
-  .gridContainer {
+  .search-div {
+    padding: 10%;
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+  }
+  .label2 {
+    display: flex;
+    h3 {
+      color: var(--color-easy-black);
+    }
+    h4 {
+      margin-left: 2%;
+    }
+  }
+  /* .gridContainer {
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     padding: 12% 6% 6% 6%;
-  }
-  .platform {
+  } */
+  /*  .platform {
     padding: 10px;
-  }
+  } */
   .input {
+    padding: 2%;
     margin-top: 3%;
-    padding: 5%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     background-color: var(--color-hard-black);
-    overflow: hidden;
     input {
+      width: 100%;
+      border: none;
       background-color: var(--color-hard-black);
     }
   }
   .searchB {
-    margin-top: 0.5%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    margin-top: 1.5%;
     background-color: var(--color-hard-black);
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    .sumB{
-        padding: 7px;
-        border-radius: 10px;
-        color: var(--color-white);
-        background-color: var(--color-easy-black);
-        border-color: transparent;
+    .sumB {
+      padding: 7px;
+      border-radius: 10px;
+      color: var(--color-white);
+      background-color: var(--color-easy-black);
+      border-color: transparent;
     }
-    .clickB{
-        padding: 10% 30%;
-        color: var(--color-hard-black);
-        background-color: var(--color-white);
-        border-radius: 20px;
-
+    .clickB {
+      width: 100%;
+      padding: 5%;
+      background-color: var(--color-white);
+      border-radius: 5px;
+      border: none;
     }
   }
 }

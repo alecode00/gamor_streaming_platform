@@ -7,8 +7,6 @@ export const PlatformSelector = ({ handleSelectPlatform }) => {
 
   return (
     <>
-    <div>
-
         <div className="choose" >
           <h3>01. </h3>
           <h4>Choose Platform</h4>
@@ -24,7 +22,6 @@ export const PlatformSelector = ({ handleSelectPlatform }) => {
           XBOX
         </a>
         </div>
-    </div>
     </>
   );
 };
