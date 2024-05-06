@@ -7,11 +7,12 @@ export const Searcher = ({ search, handleOnChange }) => {
 
   return (
     <>
-        <input
-          type="text"
-          value={search}
-          onChange={handleOnChange}
-        />
+      <input
+        placeholder="Enter Game"
+        type="text"
+        value={search}
+        onChange={handleOnChange}
+      />
     </>
   );
 };

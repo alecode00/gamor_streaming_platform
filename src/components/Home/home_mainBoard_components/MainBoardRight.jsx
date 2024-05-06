@@ -63,8 +63,8 @@ export const MainBoardRight = ({ category }) => {
         <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
       </div>
 
-      <div className="search-div" >
-        <div className="label2" > 
+      <div className="search-div">
+        <div className="label2">
           <h3>02. </h3>
           <h4>Searching Game</h4>
         </div>
@@ -73,6 +73,7 @@ export const MainBoardRight = ({ category }) => {
         </div>
         <div className="searchB">
           <SButton
+            isElement={isElement}
             arrayShowed={arrayShowed}
             handleIsElement={handleIsElement}
             handleArrayShowed={handleArrayShowed}

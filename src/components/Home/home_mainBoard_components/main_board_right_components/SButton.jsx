@@ -1,6 +1,10 @@
 import { PropTypes } from "prop-types";
+import { useState } from "react";
+
+let showed;
 
 export const SButton = ({
+  isElement,
   arrayShowed,
   handleIsElement,
   handleArrayShowed,
@@ -19,6 +23,7 @@ export const SButton = ({
     platform: PropTypes.string,
     search: PropTypes.string,
   };
+  const [isAdded, setIsAdded] = useState(false);
 
   //Manejando el buscador--------------------------------------------
   const handleSearchNow = () => {
@@ -31,10 +36,10 @@ export const SButton = ({
         games[i].name === search &&
         games[i].parent_platforms[0].platform.name === platform &&
         games[i].genres[0].name === category /* &&
-        i === 0 */
+        games.length === 0 */
       ) {
         handleArrayShowed([games[i].name]);
-        console.log("Estoy asignando arrayShoewed:");
+        console.log("Estoy asignando arrayShoewed en 1:");
 
         handleIsElement(true);
       } /* else if (
@@ -43,23 +48,50 @@ export const SButton = ({
         games[i].genres[0].name === category
       ) {
         handleArrayShowed([...arrayShowed, games[i].name]);
-        console.log("Estoy asignando arrayShoewed:");
+        console.log("Estoy asignando arrayShoewed en 2:");
 
         handleIsElement(true);
       } */ else {
         handleIsElement(false);
+        console.log("entre en false");
       }
     }
 
     console.log(`arrayShowed:${arrayShowed}`);
     console.log("El boton fue tocado");
   };
+  const addUser = () => {
+    setIsAdded(!isAdded);
+  };
+  const print = (arrayShowed,isAdded) => {
+    let output;
+    if (isAdded) {
+      output=<p>✔</p>
+    } else{
+      output=<p>+</p>
+    }
+    return (
+      <>
+        <div className="print">
+          <p id="game">{arrayShowed}</p>
+          <button onClick={addUser} className="sumB">
+            {output}
+          </button>
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
-      {arrayShowed}
-      <button className="sumB" >+</button>
-      <button className="clickB" onClick={handleSearchNow}>Search Now</button>
+      {print(arrayShowed,isAdded)}
+      {showed}
+
+      {/* {arrayShowed}
+      <button className="sumB" >+</button> */}
+      <button className="clickB" onClick={handleSearchNow}>
+        <b>Search Now</b>
+      </button>
     </>
   );
 };

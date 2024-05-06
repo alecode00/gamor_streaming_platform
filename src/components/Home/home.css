@@ -130,6 +130,7 @@ section {
   }
   .search-div {
     padding: 10%;
+    padding-top: 0;
     display: flex;
     height: 80%;
     flex-direction: column;
@@ -143,21 +144,17 @@ section {
       margin-left: 2%;
     }
   }
-  /* .gridContainer {
-    display: grid;
-    width: 100%;
-    padding: 12% 6% 6% 6%;
-  } */
-  /*  .platform {
-    padding: 10px;
-  } */
+
   .input {
+    display: flex;
+    height: 10%;
     padding: 2%;
     margin-top: 3%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: var(--color-hard-black);
     input {
+      color: var(--color-white);
       width: 100%;
       border: none;
       background-color: var(--color-hard-black);
@@ -172,12 +169,23 @@ section {
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    justify-content: space-between;
     .sumB {
-      padding: 7px;
-      border-radius: 10px;
+      border-radius: 5px;
       color: var(--color-white);
       background-color: var(--color-easy-black);
       border-color: transparent;
+      p{
+        margin: 0;
+      }
+    }
+    .print {
+      display: flex;
+      justify-content: space-between;
+      height: 13%;
+      #game{
+        margin: 0;
+      }
     }
     .clickB {
       width: 100%;
