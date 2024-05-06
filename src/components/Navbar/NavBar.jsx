@@ -25,9 +25,14 @@ export const NavBar = () => {
     <>
       <header>
         <BrowserRouter>
-          <div className='containerHeader'>
-            <section className="containerHeaderLeft" >
-              <NavLink className={({isActive}) => (isActive? "active":null)} to="/">Home</NavLink>
+          <div className="containerHeader">
+            <section className="containerHeaderLeft">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : null)}
+                to="/"
+              >
+                Home
+              </NavLink>
               <a href="#" onClick={handleFalseLink}>
                 Streams
               </a>
@@ -43,13 +48,25 @@ export const NavBar = () => {
               <h3>Gamor</h3>
             </section>
             <section className="containerHeaderRight">
-              <NavLink className={({isActive}) =>(isActive? "active":null)} to="/log">Sign in</NavLink>
-              <NavLink id="register" className={({isActive}) =>(isActive? "active":null)} to="/register">Create account</NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : null)}
+                to="/log"
+              >
+                Sign in
+              </NavLink>
+              <NavLink
+                id="register"
+                className={({ isActive }) => (isActive ? "active" : null)}
+                to="/register"
+              >
+                Create account
+              </NavLink>
               <button id="themeButton" onClick={handleOnClick}>
                 {theme == "light" ? "Dark Mode" : "Light Mode"}
               </button>
             </section>
           </div>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/log" element={<LogIn />} />

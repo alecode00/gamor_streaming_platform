@@ -64,7 +64,7 @@ section {
   }
   #register {
     border-radius: 20px;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-easy-black);
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
@@ -82,3 +82,4 @@ section {
     outline: 4px auto -webkit-focus-ring-color;
   }
 }
+

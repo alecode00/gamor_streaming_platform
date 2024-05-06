@@ -3,11 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
   --color-black: #1a1a1a;
-  --color-hard-black: #202020;
-  --color-medium-black: #303030;
+  --color-hard-black: #1c2020;
+  --color-medium-black: #232727;
   --color-medium2-black: #454545;
-  --color-easy-black: #656565;
+  --color-easy-black: #737878;
   --color-coral: rgb(255, 90, 29);
+  --color-coral2: rgb(244, 129, 74);
+  --color-coral-profund: rgb(190, 51, 0);
   --color-white: white;
   --color-purple:rgb(148, 42, 148);
 }

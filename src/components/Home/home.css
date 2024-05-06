@@ -1,4 +1,5 @@
 .mainBoard1 {
+  height: 85vh;
   display: flex;
   background-color: var(--color-medium-black);
   border-radius: 20px;
@@ -61,13 +62,28 @@ section {
     line-height: 0.3;
     font-size: 32px;
   }
-  #log{
+  #log {
     padding: 2%;
   }
 }
 .mainBoardCenter {
+    background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite2.jpg");
+    background-size: 100% 100%;
+  .clock_container {
+    padding-top: 2%;
+  }
+  .time_left {
+    border-radius: 20px;
+    display: inline;
+    padding: 2% 5%;
+    background-color: var(--color-white);
+    color: var(--color-coral);
+  }
+  #join {
+    color: var(--color-coral-profund);
+  }
   text-align: center;
-  background-color: var(--color-coral);
+ /*  background-color: var(--color-coral); */
 }
 .mainBoardRight {
   display: flex;

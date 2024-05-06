@@ -5,9 +5,9 @@ export const MainBoardCenter = () => {
     <>
       <div>
         <h2>Fornite New Season</h2>
-        <p>Join Live Stream</p>
-        <div className="time_left">
-          <p>
+        <p id="join" >Join Live Stream</p>
+        <div className="clock_container">
+          <p className="time_left" >
             {hours_left} : {minutes_left}{" "}
           </p>
         </div>
