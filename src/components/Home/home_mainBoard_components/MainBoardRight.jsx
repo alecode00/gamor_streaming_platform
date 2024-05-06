@@ -59,13 +59,17 @@ export const MainBoardRight = ({ category }) => {
   //OUTPUT
   return (
     <>
-      <div>
+      <section className="platform" >
         <PlatformSelector handleSelectPlatform={handleSelectPlatform} />
 
-        <section>
+        <div>
+          <h3>02. </h3>
+          <h4>Searching Game</h4>
+        </div>
+        <div className="input" >
           <Searcher search={search} handleOnChange={handleOnChange} />
-          {/* {gamesNames} */}
-          <br />
+        </div>
+        <div className="searchB" >
           <SButton
             arrayShowed={arrayShowed}
             handleIsElement={handleIsElement}
@@ -75,8 +79,8 @@ export const MainBoardRight = ({ category }) => {
             platform={platform}
             search={search}
           />
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

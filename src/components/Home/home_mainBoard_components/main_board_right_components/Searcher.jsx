@@ -7,14 +7,11 @@ export const Searcher = ({ search, handleOnChange }) => {
 
   return (
     <>
-      <p>02. </p>
-      <h3>Searching Game</h3>
-      <input
-        type="text"
-        placeholder="Search"
-        value={search}
-        onChange={handleOnChange}
-      />
+        <input
+          type="text"
+          value={search}
+          onChange={handleOnChange}
+        />
     </>
   );
 };

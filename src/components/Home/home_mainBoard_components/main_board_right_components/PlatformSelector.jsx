@@ -7,11 +7,13 @@ export const PlatformSelector = ({ handleSelectPlatform }) => {
 
   return (
     <>
-      <section>
-        <div>
+    <div>
+
+        <div className="choose" >
           <h3>01. </h3>
           <h4>Choose Platform</h4>
         </div>
+        <div className="platforms_container" >
         <a id="PC" href="#" onClick={handleSelectPlatform}>
           PC
         </a>
@@ -21,7 +23,8 @@ export const PlatformSelector = ({ handleSelectPlatform }) => {
         <a id="XBOX" href="#" onClick={handleSelectPlatform}>
           XBOX
         </a>
-      </section>
+        </div>
+    </div>
     </>
   );
 };

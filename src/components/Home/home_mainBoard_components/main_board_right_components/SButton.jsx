@@ -57,10 +57,10 @@ export const SButton = ({
 
   return (
     <>
-      <button>+</button>
+      <button className="sumB" >+</button>
       {arrayShowed}
       <br />
-      <button onClick={handleSearchNow}>Search Now</button>
+      <button className="clickB" onClick={handleSearchNow}>Search Now</button>
     </>
   );
 };

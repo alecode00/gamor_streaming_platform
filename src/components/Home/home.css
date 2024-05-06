@@ -11,6 +11,14 @@ section {
   width: 30%;
 }
 .mainBoardLeft {
+  p {
+    b {
+      text-decoration: underline var(--color-coral) wavy 2px;
+      text-underline-offset: 5px;
+    }
+    display: contents;
+    font-size: 15px;
+  }
   a {
     text-decoration: none;
     color: var(--color-white);
@@ -44,15 +52,13 @@ section {
   #reverse {
     color: var(--color-purple);
   }
-  p {
-    b {
-      text-decoration: underline var(--color-coral) wavy 2px;
-      text-underline-offset: 5px;
-    }
-    display: contents;
-    font-size: 15px;
+  #log {
+    padding: 2%;
   }
-  .grid-container{
+  #links {
+    display: block;
+  }
+  .grid-container {
     display: grid;
     width: 100%;
     padding: 12% 6% 6% 6%;
@@ -63,13 +69,7 @@ section {
     line-height: 0.3;
     font-size: 32px;
   }
-  #log {
-    padding: 2%;
-  }
-  #links{
-    display: block;
-  }
-  .parrafo{
+  .parrafo {
     display: block;
   }
 }
@@ -92,15 +92,74 @@ section {
   text-align: center;
 }
 .mainBoardRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    h3{
-        display: inline;
+  display: grid;
+  justify-content: center;
+  padding: 2%;
+  section {
+    display: grid;
+  }
+  h3 {
+    color: var(--color-easy-black);
+    display: inline;
+  }
+  h4 {
+    display: inline;
+  }
+  .platforms_container {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-hard-black);
+    border-radius: 20px;
+    a {
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: var(--color-white);
     }
-    h4{
-        display: inline;
+    a:hover {
+      background-color: var(--color-medium2-black);
+      border-radius: 20px;
     }
+  }
+  .gridContainer {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    padding: 12% 6% 6% 6%;
+  }
+  .platform {
+    padding: 10px;
+  }
+  .input {
+    margin-top: 3%;
+    padding: 5%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--color-hard-black);
+    overflow: hidden;
+    input {
+      background-color: var(--color-hard-black);
+    }
+  }
+  .searchB {
+    margin-top: 0.5%;
+    background-color: var(--color-hard-black);
+    padding: 2%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .sumB{
+        padding: 7px;
+        border-radius: 10px;
+        color: var(--color-white);
+        background-color: var(--color-easy-black);
+        border-color: transparent;
+    }
+    .clickB{
+        padding: 10% 30%;
+        color: var(--color-hard-black);
+        background-color: var(--color-white);
+        border-radius: 20px;
 
+    }
+  }
 }
