@@ -5,13 +5,13 @@ export const PlatformSelector = ({ handleSelectPlatform }) => {
     handleSelectPlatform: PropTypes.func,
   };
 
- 
-
   return (
     <>
       <section>
-        <p>01. </p>
-        <h3>Choose Platform</h3>
+        <div>
+          <h3>01. </h3>
+          <h4>Choose Platform</h4>
+        </div>
         <a id="PC" href="#" onClick={handleSelectPlatform}>
           PC
         </a>

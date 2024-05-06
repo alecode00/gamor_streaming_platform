@@ -6,15 +6,15 @@ export const MainBoardLeft = () => {
   };
   return (
     <>
-      <div>
+      <div className="grid-container" >
         <h1>start</h1>
         <h1 id="reverse">streaming</h1>
         <h1>games</h1>
         <h1>differently</h1>
-        <p>
+        <p className="parrafo" >
           gamor now has  <b>stream party</b> platform
         </p>
-        <div>
+        <div className="links" >
 
         <a href="#" id="register" onClick={handleFalseLink}>
           Create account

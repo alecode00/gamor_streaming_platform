@@ -52,7 +52,8 @@ section {
     display: contents;
     font-size: 15px;
   }
-  div {
+  .grid-container{
+    display: grid;
     width: 100%;
     padding: 12% 6% 6% 6%;
   }
@@ -65,10 +66,16 @@ section {
   #log {
     padding: 2%;
   }
+  #links{
+    display: block;
+  }
+  .parrafo{
+    display: block;
+  }
 }
 .mainBoardCenter {
-    background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite2.jpg");
-    background-size: 100% 100%;
+  background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite2.jpg");
+  background-size: 100% 100%;
   .clock_container {
     padding-top: 2%;
   }
@@ -83,9 +90,17 @@ section {
     color: var(--color-coral-profund);
   }
   text-align: center;
- /*  background-color: var(--color-coral); */
 }
 .mainBoardRight {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    h3{
+        display: inline;
+    }
+    h4{
+        display: inline;
+    }
+
 }
