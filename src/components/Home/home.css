@@ -175,7 +175,7 @@ section {
       color: var(--color-white);
       background-color: var(--color-easy-black);
       border-color: transparent;
-      p{
+      p {
         margin: 0;
       }
     }
@@ -183,7 +183,7 @@ section {
       display: flex;
       justify-content: space-between;
       height: 13%;
-      #game{
+      #game {
         margin: 0;
       }
     }
@@ -195,4 +195,9 @@ section {
       border: none;
     }
   }
+}
+.trendingCategories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
