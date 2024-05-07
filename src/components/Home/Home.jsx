@@ -2,9 +2,12 @@ import { MainBoardLeft } from "./home_mainBoard_components/MainBoardLeft";
 import { MainBoardCenter } from "./home_mainBoard_components/MainBoardCenter";
 import { MainBoardRight } from "./home_mainBoard_components/MainBoardRight";
 import { TrendingCategories } from "./home_trending_categories_components/TrendingCategories";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
 import "./home.css";
+
+let mainBoardCenterTheme = "mainBoardCenterDark";
+
 export const Home = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -14,6 +17,21 @@ export const Home = () => {
     setCategory(newCategory);
   };
 
+  const imageUrlSelect = () =>{
+    if (theme == 'light') {
+      mainBoardCenterTheme = "mainBoardCenterDark"
+    }else{
+      mainBoardCenterTheme = "mainBoardCenterLight"
+    }
+  }
+  useEffect(() => {
+    imageUrlSelect()
+  
+   
+  }, [theme])
+  
+
+
   return (
     <>
         <div className={theme}>
@@ -21,7 +39,7 @@ export const Home = () => {
           <section className="mainBoardLeft">
             <MainBoardLeft />
           </section>
-          <section className="mainBoardCenter">
+          <section className={mainBoardCenterTheme}>
             <MainBoardCenter />
           </section>
           <section className="mainBoardRight">

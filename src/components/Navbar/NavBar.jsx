@@ -23,7 +23,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <header>
+      <header className={theme} >
         <BrowserRouter>
           <div className="containerHeader">
             <section className="containerHeaderLeft">

@@ -1,9 +1,8 @@
 .mainBoard1 {
   height: 85vh;
   display: flex;
-  background-color: var(--color-medium-black);
+  background-color: var(--color-mediumBlack-mainWhite);
   border-radius: 20px;
-  /* padding: 1%; */
   width: 100%;
   margin-top: 3%;
 }
@@ -11,9 +10,10 @@ section {
   width: 30%;
 }
 .mainBoardLeft {
+  color: var(--color-white-black);
   p {
     b {
-      text-decoration: underline var(--color-coral) wavy 2px;
+      text-decoration: underline var(--color-orange-purple) wavy 2px;
       text-underline-offset: 5px;
     }
     display: contents;
@@ -21,29 +21,30 @@ section {
   }
   a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-easyBlack-easyBlack);
     text-underline-offset: 2px;
     transition: text-underline-offset 0.75s;
   }
   a:hover {
-    text-decoration: 3px solid underline var(--color-coral);
+    text-decoration: 3px solid underline var(--color-orange-purple);
     text-underline-position: under;
     text-underline-offset: 10px;
   }
   #register {
+    color: var(--color-white-black);
     border-radius: 20px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: var(--color-medium2-black);
+    background-color: var(--color-mediumBlack2-white);
     cursor: pointer;
     transition: border-color 0.25s;
-    box-shadow: 2px 15px 6px var(--color-hard-black) ;
+    box-shadow: 2px 15px 6px var(--color-hardBlack-hardWhite) ;
   }
   #register:hover {
-    border-color: var(--color-easy-black);
+    border-color: var(--color-easyBlack-easyBlack);
     text-decoration: none;
   }
   #register:focus,
@@ -51,7 +52,7 @@ section {
     outline: 4px auto -webkit-focus-ring-color;
   }
   #reverse {
-    color: var(--color-purple);
+    color: var(--color-orange-purple);
   }
   #log {
     padding: 2%;
@@ -74,8 +75,8 @@ section {
     display: block;
   }
 }
-.mainBoardCenter {
-  background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite2.jpg");
+.mainBoardCenterLight {
+  background-image: url("./home_mainBoard_components/main_board_center_components/VioletPicOfFornite.jpg");
   background-size: 100% 100%;
   .clock_container {
     padding-top: 2%;
@@ -84,11 +85,29 @@ section {
     border-radius: 20px;
     display: inline;
     padding: 2% 5%;
-    background-color: var(--color-white);
-    color: var(--color-coral);
+    background-color: var(--color-white-white);
+    color: var(--color-orange-purple);
   }
   #join {
-    color: var(--color-coral-profund);
+    color: var(--color-hardOrange-hardPurple);
+  }
+  text-align: center;
+}
+.mainBoardCenterDark {
+  background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite.jpg");
+  background-size: 100% 100%;
+  .clock_container {
+    padding-top: 2%;
+  }
+  .time_left {
+    border-radius: 20px;
+    display: inline;
+    padding: 2% 5%;
+    background-color: var(--color-white-white);
+    color: var(--color-orange-purple);
+  }
+  #join {
+    color: var(--color-hardOrange-hardPurple);
   }
   text-align: center;
 }
@@ -101,9 +120,10 @@ section {
   .choose {
     display: flex;
     h3 {
-      color: var(--color-easy-black);
+      color: var(--color-easyBlack-easyBlack);
     }
     h4 {
+      color: var(--color-white-black);
       margin-left: 2%;
     }
   }
@@ -114,18 +134,18 @@ section {
   .platforms_container {
     display: flex;
     justify-content: center;
-    background-color: var(--color-hard-black);
+    background-color: var(--color-hardBlack-white);
     border-radius: 20px;
     a {
       width: 30%;
       text-align: center;
       padding: 10px 20px;
       text-decoration: none;
-      color: var(--color-white);
+      color: var(--color-easyBlack-easyBlack);
     }
     a:hover {
       text-align: center;
-      background-color: var(--color-medium2-black);
+      background-color: var(--color-mediumBlack2-mainWhite);
       border-radius: 20px;
     }
   }
@@ -139,9 +159,10 @@ section {
   .label2 {
     display: flex;
     h3 {
-      color: var(--color-easy-black);
+      color: var(--color-easyBlack-easyBlack);
     }
     h4 {
+      color: var(--color-white-black);
       margin-left: 2%;
     }
   }
@@ -153,12 +174,12 @@ section {
     margin-top: 3%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: var(--color-hard-black);
+    background-color: var(--color-hardBlack-white);
     input {
-      color: var(--color-white);
+      color: var(--color-white-black);
       width: 100%;
       border: none;
-      background-color: var(--color-hard-black);
+      background-color: var(--color-hardBlack-white);
       box-shadow: none;
       font: italic;
     }
@@ -168,7 +189,7 @@ section {
     flex-direction: column;
     height: 70%;
     margin-top: 1.5%;
-    background-color: var(--color-hard-black);
+    background-color: var(--color-hardBlack-white);
     padding: 2%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -176,7 +197,7 @@ section {
     .sumB {
       border-radius: 5px;
       color: var(--color-white);
-      background-color: var(--color-easy-black);
+      background-color: var(--color-veryEasyBlack-veryEasyBlack);
       border-color: transparent;
       p {
         margin: 0;
@@ -191,15 +212,17 @@ section {
       }
     }
     .clickB {
+      color: var(--color-black-white);
       width: 100%;
       padding: 5%;
-      background-color: var(--color-white);
+      background-color: var(--color-white-black);
       border-radius: 5px;
       border: none;
     }
   }
 }
 .trendingCategories {
+  color: var(--color-white-black);
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -1,34 +1,4 @@
-/* .container {
-    background-image: linear-gradient(#051327, #000);
-    position: fixed;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-} */
 
-/* input {
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 2px 2px 2px #fff;
-    border-radius: 10px;
-} */
-
-/* .space-1{
-    --size: 2px;
-    --space-layer:
-    4vw 50vh 0 #fff,
-    18vw 88hv 0 #fff;
-
-    width: var(--size);
-    height: var(--size);
-    background: #fff;
-    box-shadow: var(--space-layer);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 75%;
-} */
 
 input {
     border: 0;
@@ -37,10 +7,10 @@ input {
     margin: 10px;
     box-shadow: 2px 2px 2px #fff;
     border-radius: 10px;
-    color: var(--color-white);
+    color: var(--color-white-black);
 
     &::placeholder {
-        color: #fafafa;
+        color: var(--color-white-black);
     }
 
 }
@@ -54,7 +24,7 @@ input {
     input {
         outline: 0;
         padding: .5rem 1rem;
-        color: var(--color-white);
+        color: var(--color-white-black);
 
         &[type="email"],
         &[type="password"]
@@ -77,16 +47,16 @@ input {
 
 
 a {
-    color: var(--color-white);
+    color: var(--color-white-black);
 }
 
 .register {
-    box-shadow: 0 0 250px var(--color-black);
+    box-shadow: 0 0 250px var(--color-black-white);
     text-align: center;
     padding: 4rem 2rem;
 
     input {
-        border: 1px solid var(--color-black);
+        border: 1px solid var(--color-black-white);
         border-radius: 999px;
         background-color: transparent;
         text-align: center;
@@ -107,8 +77,8 @@ a {
         }
 
         &[type="submit"] {
-            background-image: linear-gradient(160deg, var(--color-coral2) 0%, var(--color-coral-profund) 100%);
-            color: var(--color-white);
+            background-image: linear-gradient(160deg, var(--color-easyOrange-easyPurple) 0%, var(--color-hardOrange-hardPurple) 100%);
+            color: var(--color-white-black);
             margin-bottom: 6rem;
             width: 100%;
         }

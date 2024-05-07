@@ -1,5 +1,5 @@
 header {
-  background-color: var(--color-hard-black);
+  background-color: var(--color-hardBlack-hardWhite);
   padding: 3%;
 }
 .containerHeader {
@@ -8,12 +8,12 @@ header {
 
   a {
     text-decoration: none;
-    color: var(--color-easy-black);
+    color: var(--color-easyBlack-easyBlack);
     text-underline-offset: 2px;
     transition: text-underline-offset 0.75s;
   }
   a:hover {
-    text-decoration: 3px solid underline var(--color-coral);
+    text-decoration: 3px solid underline var(--color-orange-purple);
     text-underline-position: under;
     text-underline-offset: 10px;
   }
@@ -21,7 +21,7 @@ header {
 section {
   width: 33%;
   a.active {
-    color: var(--color-coral);
+    color: var(--color-orange-purple);
   }
 }
 .containerHeaderLeft {
@@ -33,25 +33,28 @@ section {
 }
 .containerHeaderCenter {
   text-align: center;
+  h3{
+    color: var(--color-white-black);
+  }
 }
 .containerHeaderRight {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   button {
-    color: var(--color-white);
+    color: var(--color-white-black);
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: var(--color-black);
+    background-color: var(--color-black-white);
     cursor: pointer;
     transition: border-color 0.25s;
   }
   button:hover {
-    border-color: var(--color-coral);
+    border-color: var(--color-orange-purple);
   }
   button:focus,
   button:focus-visible {
@@ -59,22 +62,23 @@ section {
   }
   a {
     padding: 2.5% 2.5%;
-    color: var(--color-white);
+    color: var(--color-white-black);
     margin: 2.5%;
   }
   #register {
+    color: var(--color-white-white);
     border-radius: 20px;
-    border: 1px solid var(--color-easy-black);
+    border: 1px solid var(--color-easyBlack-hardWhite);
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: var(--color-black);
+    background-color: var(--color-black-black);
     cursor: pointer;
     transition: border-color 0.25s;
   }
   #register:hover {
-    border-color: var(--color-coral);
+    border-color: var(--color-orange-purple);
     text-decoration: none;
   }
   #register:focus,
