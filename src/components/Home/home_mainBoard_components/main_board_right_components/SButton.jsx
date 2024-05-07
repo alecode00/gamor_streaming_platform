@@ -10,9 +10,9 @@ const initialAddedArray = [
   },
 ];
 export const SButton = ({
-  isElement,
+  /* isElement, */
   arrayShowed,
-  handleIsElement,
+  /* handleIsElement, */
   handleArrayShowed,
   category,
   games,
@@ -20,7 +20,7 @@ export const SButton = ({
   platform,
 }) => {
   SButton.propTypes = {
-    isElement: PropTypes.bool,
+    
     arrayShowed: PropTypes.array,
     handleIsElement: PropTypes.func,
     handleArrayShowed: PropTypes.func,
@@ -54,20 +54,8 @@ export const SButton = ({
         handleArrayShowed([games[i].name]);
         console.log("Estoy asignando arrayShoewed en 1:");
 
-        handleIsElement(true);
-      } /* else if (
-        games[i].name === search &&
-        games[i].parent_platforms[0].platform.name === platform &&
-        games[i].genres[0].name === category
-      ) {
-        handleArrayShowed([...arrayShowed, games[i].name]);
-        console.log("Estoy asignando arrayShoewed en 2:");
-
-        handleIsElement(true);
-      } */ else {
-        handleIsElement(false);
-        console.log("entre en false");
-      }
+        
+      } 
     }
 
     console.log(`arrayShowed:${arrayShowed}`);
