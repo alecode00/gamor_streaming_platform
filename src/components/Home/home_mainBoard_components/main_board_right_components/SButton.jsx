@@ -73,32 +73,8 @@ export const SButton = ({
     console.log(`arrayShowed:${arrayShowed}`);
     console.log("El boton fue tocado");
   };
-  /* const addUser = () => {
-    setIsAdded(!isAdded);
-  }; */
-  /* const print = (arrayShowed, isAdded) => {
-    let output;
-    if (isAdded) {
-      output = <p>✔</p>;
-    } else {
-      output = <p>+</p>;
-    }
-    showed = (
-      <>
-        <div className="print">
-          <p id="game">{arrayShowed}</p>
-          <button onClick={addUser} className="sumB">
-            {output}
-          </button>
-        </div>
-      </>
-    );
-  }; */
-
   return (
     <>
-      {/* {print(arrayShowed, isAdded)}
-      {showed} */}
       <AddButton isTouched={isTouched} arrayShowed={arrayShowed} addedArray={addedArray} handleAddedArray={handleAddedArray}  />
       <button className="clickB" onClick={handleSearchNow}>
         <b>Search Now</b>
