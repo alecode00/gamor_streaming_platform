@@ -38,13 +38,13 @@ export const NavBar = () => {
               >
                 Home
               </NavLink>
-              <a href="#" onClick={handleFalseLink}>
+              <a className="ghost" href="#" onClick={handleFalseLink}>
                 Streams
               </a>
-              <a href="#" onClick={handleFalseLink}>
+              <a className="ghost" href="#" onClick={handleFalseLink}>
                 Party
               </a>
-              <a href="#" onClick={handleFalseLink}>
+              <a className="ghost" href="#" onClick={handleFalseLink}>
                 Premium
               </a>
             </section>

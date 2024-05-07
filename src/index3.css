@@ -49,3 +49,44 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+@media screen and (max-width:780px){
+.mainBoard1{
+  flex-direction: column;
+  width: 440px;
+  height: max-content;
+}
+.mainBoardCenterLight{
+  height: 63vh;
+}
+.mainBoardCenterDark{
+  height: 63vh;
+}
+section {
+  width: 100%;
+  height: 30%;
+}
+}
+@media screen and (max-width:635px){
+.containerHeaderCenter{
+  display: none;
+}
+
+
+}
+@media screen and (max-width:600px){
+.ghost{
+  display: none;
+}
+.mainBoard1{
+  width: 220px;
+
+}
+.mainBoardCenterLight{
+  height: 43vh;
+}
+.mainBoardCenterDark{
+  height: 43vh;
+
+
+}
+}
