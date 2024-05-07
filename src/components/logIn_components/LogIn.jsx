@@ -27,7 +27,6 @@ export const LogIn = () => {
   } else if (isTry) {
     component = <h1>Your user is not registered</h1>;
   }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsTry(true);
@@ -41,13 +40,11 @@ export const LogIn = () => {
       }
     });
   };
-
   return (
     <>
       <div className="grid align__item">
         <div className="register">
           <h1>Welcome Back</h1>
-
           <form
             action=""
             method="post"
@@ -57,15 +54,12 @@ export const LogIn = () => {
             <div className="form__field">
               <input type="username" placeholder="username" />
             </div>
-
             <div className="form__field">
               <input type="email" placeholder="info@mailaddress.com" />
             </div>
-
             <div className="form__field">
               <input type="password" placeholder="••••••••••••" />
             </div>
-
             <div className="form__field">
               <input type="submit" value="Sign In" />
             </div>

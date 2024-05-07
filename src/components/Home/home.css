@@ -41,7 +41,7 @@ section {
     background-color: var(--color-mediumBlack2-white);
     cursor: pointer;
     transition: border-color 0.25s;
-    box-shadow: 2px 15px 6px var(--color-hardBlack-hardWhite) ;
+    box-shadow: 2px 15px 6px var(--color-hardBlack-hardWhite);
   }
   #register:hover {
     border-color: var(--color-easyBlack-easyBlack);
@@ -76,7 +76,7 @@ section {
   }
 }
 .mainBoardCenterLight {
-  background-image: url("./home_mainBoard_components/main_board_center_components/VioletPicOfFornite.jpg");
+  background-image: url("./home_mainBoard_components/main_board_center_components/VioletPicOfFortnite.jpg");
   background-size: 100% 100%;
   .clock_container {
     padding-top: 2%;
@@ -94,7 +94,7 @@ section {
   text-align: center;
 }
 .mainBoardCenterDark {
-  background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFornite.jpg");
+  background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFortnite5.jpg");
   background-size: 100% 100%;
   .clock_container {
     padding-top: 2%;

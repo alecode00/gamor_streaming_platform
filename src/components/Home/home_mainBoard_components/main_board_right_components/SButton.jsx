@@ -10,9 +10,7 @@ const initialAddedArray = [
   },
 ];
 export const SButton = ({
-  /* isElement, */
   arrayShowed,
-  /* handleIsElement, */
   handleArrayShowed,
   category,
   games,
@@ -20,7 +18,6 @@ export const SButton = ({
   platform,
 }) => {
   SButton.propTypes = {
-    
     arrayShowed: PropTypes.array,
     handleIsElement: PropTypes.func,
     handleArrayShowed: PropTypes.func,
@@ -33,10 +30,9 @@ export const SButton = ({
   const [addedArray, setAddedArray] = useState(initialAddedArray);
   const [isTouched, setIsTouched] = useState(false);
 
-
-  const handleAddedArray = (newAddedArray) =>{
+  const handleAddedArray = (newAddedArray) => {
     setAddedArray(newAddedArray);
-  }
+  };
   //Manejando el buscador--------------------------------------------
   const handleSearchNow = () => {
     setIsTouched(!isTouched);
@@ -53,9 +49,7 @@ export const SButton = ({
       ) {
         handleArrayShowed([games[i].name]);
         console.log("Estoy asignando arrayShoewed en 1:");
-
-        
-      } 
+      }
     }
 
     console.log(`arrayShowed:${arrayShowed}`);
@@ -63,7 +57,12 @@ export const SButton = ({
   };
   return (
     <>
-      <AddButton isTouched={isTouched} arrayShowed={arrayShowed} addedArray={addedArray} handleAddedArray={handleAddedArray}  />
+      <AddButton
+        isTouched={isTouched}
+        arrayShowed={arrayShowed}
+        addedArray={addedArray}
+        handleAddedArray={handleAddedArray}
+      />
       <button className="clickB" onClick={handleSearchNow}>
         <b>Search Now</b>
       </button>

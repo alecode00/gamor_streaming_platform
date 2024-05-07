@@ -2,25 +2,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  /* --color-black: #1a1a1a;
-  --color-hardBlack: #1c2020;
-  --color-mediumBlack: #232727;
-  --color-medium2Black: #454545;
-  --color-easyBlack: rgb(115, 120, 120);
-  --color-orange: rgb(255, 90, 29);
-  --color-orange2: rgb(244, 129, 74);
-  --color-hardOrange: rgb(190, 51, 0);
-  --color-purple:rgb(148, 42, 148);
-  --color-hardPurple:rgb(105, 0, 105);
-  --color-white: white;
-  --color-hardWhite: rgb(235, 235, 235);
-  --color-mainWhite: rgb(245, 245, 245); */
 }
-.light{
+.light {
   --color-orange-purple: rgb(148, 42, 148);
-  --color-black-white:white;
-  --color-easyBlack-black:#1a1a1a;
-  --color-black-black:#1a1a1a;
+  --color-black-white: white;
+  --color-easyBlack-black: #1a1a1a;
+  --color-black-black: #1a1a1a;
   --color-white-white: white;
   --color-hardBlack-hardWhite: rgb(225, 225, 225);
   --color-mediumBlack-mainWhite: rgb(235, 235, 235);
@@ -31,18 +18,16 @@
   --color-hardBlack-white: white;
   --color-mediumBlack-mainWhite: rgb(235, 235, 235);
   --color-white-black: #1a1a1a;
-  --color-easyBlack-hardWhite:rgb(245, 245, 245);
+  --color-easyBlack-hardWhite: rgb(245, 245, 245);
   --color-mediumBlack2-mainWhite: rgb(235, 235, 235);
   --color-veryEasyBlack-veryEasyBlack: rgba(185, 185, 185, 0.342);
-  --color-easyOrange-easyPurple:rgb(201, 57, 201);
-
-
+  --color-easyOrange-easyPurple: rgb(201, 57, 201);
 }
-.dark{
+.dark {
   --color-orange-purple: rgb(255, 90, 29);
-  --color-black-white:#1a1a1a;
-  --color-easyBlack-black:rgb(115, 120, 120);
-  --color-black-black:#1a1a1a;
+  --color-black-white: #1a1a1a;
+  --color-easyBlack-black: rgb(115, 120, 120);
+  --color-black-black: #1a1a1a;
   --color-white-white: white;
   --color-hardBlack-hardWhite: #1c2020;
   --color-mediumBlack-mainWhite: #232727;
@@ -53,11 +38,10 @@
   --color-hardBlack-white: #1c2020;
   --color-mediumBlack-mainWhite: #232727;
   --color-white-black: white;
-  --color-easyBlack-hardWhite:rgb(115, 120, 120);
+  --color-easyBlack-hardWhite: rgb(115, 120, 120);
   --color-mediumBlack2-mainWhite: #454545;
   --color-veryEasyBlack-veryEasyBlack: rgba(185, 185, 185, 0.342);
-  --color-easyOrange-easyPurple:rgb(244, 129, 74);
-
+  --color-easyOrange-easyPurple: rgb(244, 129, 74);
 }
 body {
   margin: 0;

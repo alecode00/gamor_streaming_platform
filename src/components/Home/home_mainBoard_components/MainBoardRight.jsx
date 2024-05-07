@@ -16,7 +16,6 @@ export const MainBoardRight = ({ category }) => {
   const [platform, setPlatform] = useState("PC");
   const [games, setGames] = useState([]); //obligado aqui
   const [arrayShowed, setArrayShowed] = useState([]);
-  
 
   //Cambiando la busqueda---------------------------------------
   const handleOnChange = (event) => {
@@ -49,7 +48,6 @@ export const MainBoardRight = ({ category }) => {
   useEffect(() => {
     fetchGames();
   }, []);
-  
 
   const handleArrayShowed = (game) => {
     setArrayShowed(game);
@@ -71,9 +69,7 @@ export const MainBoardRight = ({ category }) => {
         </div>
         <div className="searchB">
           <SButton
-            
             arrayShowed={arrayShowed}
-            
             handleArrayShowed={handleArrayShowed}
             category={category}
             games={games}

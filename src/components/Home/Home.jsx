@@ -7,13 +7,11 @@ import ThemeContext from "../context/ThemeContext";
 import { PropTypes } from "prop-types";
 import "./home.css";
 
-
-
-export const Home = ({handleImageClassDiv,imageClassDiv}) => {
+export const Home = ({ handleImageClassDiv, imageClassDiv }) => {
   Home.propTypes = {
     handleImageClassDiv: PropTypes.func,
     imageClassDiv: PropTypes.string,
-  }
+  };
   const { theme } = useContext(ThemeContext);
 
   const [category, setCategory] = useState("Action");
@@ -22,25 +20,21 @@ export const Home = ({handleImageClassDiv,imageClassDiv}) => {
     setCategory(newCategory);
   };
 
-  const imageUrlSelect = () =>{
-    if (theme == 'light') {
-      handleImageClassDiv("mainBoardCenterLight")
-    }else{
-      handleImageClassDiv("mainBoardCenterDark")
+  const imageUrlSelect = () => {
+    if (theme == "light") {
+      handleImageClassDiv("mainBoardCenterLight");
+    } else {
+      handleImageClassDiv("mainBoardCenterDark");
     }
-  }
+  };
   useEffect(() => {
-    imageUrlSelect()
-  
-   
-  }, [theme])
-  
-
+    imageUrlSelect();
+  }, [theme]);
 
   return (
     <>
-        <div className={theme}>
-      <section className="mainBoard1">
+      <div className={theme}>
+        <section className="mainBoard1">
           <section className="mainBoardLeft">
             <MainBoardLeft />
           </section>
@@ -50,10 +44,9 @@ export const Home = ({handleImageClassDiv,imageClassDiv}) => {
           <section className="mainBoardRight">
             <MainBoardRight category={category} />
           </section>
-      </section>
-        </div>
+        </section>
+      </div>
       <section className="trendingCategories">
-        {/* Es mejorable el TrendingCategories. Dejar solo una func con un switch dentro, viendo los id de los buttons */}
         <TrendingCategories handleChangeCategory={handleChangeCategory} />
         {console.log(`La categoria seleccionada es: ${category}`)}
       </section>

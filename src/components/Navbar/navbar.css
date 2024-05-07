@@ -33,7 +33,7 @@ section {
 }
 .containerHeaderCenter {
   text-align: center;
-  h3{
+  h3 {
     color: var(--color-white-black);
   }
 }
@@ -86,4 +86,3 @@ section {
     outline: 4px auto -webkit-focus-ring-color;
   }
 }
-

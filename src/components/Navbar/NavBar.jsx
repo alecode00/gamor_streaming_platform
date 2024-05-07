@@ -12,11 +12,11 @@ export const NavBar = () => {
     event.preventDefault();
   };
   const { theme, handleTheme } = useContext(ThemeContext);
-  const [imageClassDiv, setImageClassDiv] = useState('mainBoardCenterDark');
+  const [imageClassDiv, setImageClassDiv] = useState("mainBoardCenterDark");
 
-  const handleImageClassDiv = (newImageClassDiv) =>{
+  const handleImageClassDiv = (newImageClassDiv) => {
     setImageClassDiv(newImageClassDiv);
-  }
+  };
 
   const handleOnClick = () => {
     if (theme === "light") {
@@ -28,7 +28,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <header className={theme} >
+      <header className={theme}>
         <BrowserRouter>
           <div className="containerHeader">
             <section className="containerHeaderLeft">
@@ -73,7 +73,15 @@ export const NavBar = () => {
           </div>
 
           <Routes>
-            <Route path="/" element={<Home handleImageClassDiv={handleImageClassDiv} imageClassDiv={imageClassDiv} />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  handleImageClassDiv={handleImageClassDiv}
+                  imageClassDiv={imageClassDiv}
+                />
+              }
+            />
             <Route path="/log" element={<LogIn />} />
             <Route path="/register" element={<Register />} />
           </Routes>

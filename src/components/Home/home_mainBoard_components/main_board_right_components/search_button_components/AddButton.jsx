@@ -77,7 +77,9 @@ export const AddButton = ({
       console.log("El lenght NO fue 1");
       for (let index = 0; index < addedArray.length; index++) {
         console.log(`El lenght de mi addedArray es: ${addedArray.length} `);
-        console.log(`arrayShowed: ${arrayShowed} addedArray[index].name: ${addedArray[index].name}`);
+        console.log(
+          `arrayShowed: ${arrayShowed} addedArray[index].name: ${addedArray[index].name}`
+        );
         if (arrayShowed[0].trim() === addedArray[index].name.toString()) {
           setIsAdded(addedArray[index].state);
           setIndexArray(index);

@@ -1,4 +1,3 @@
-/* import "./App.css"; */
 import { NavBar } from "./components/Navbar/NavBar";
 import { ThemeProvider } from "./components/context/ThemeContext";
 
