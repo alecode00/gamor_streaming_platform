@@ -40,6 +40,7 @@ section {
     background-color: var(--color-medium2-black);
     cursor: pointer;
     transition: border-color 0.25s;
+    box-shadow: 2px 15px 6px var(--color-hard-black) ;
   }
   #register:hover {
     border-color: var(--color-easy-black);
@@ -158,6 +159,8 @@ section {
       width: 100%;
       border: none;
       background-color: var(--color-hard-black);
+      box-shadow: none;
+      font: italic;
     }
   }
   .searchB {
