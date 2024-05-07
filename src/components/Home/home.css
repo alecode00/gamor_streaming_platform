@@ -208,6 +208,7 @@ section {
       justify-content: space-between;
       height: 13%;
       #game {
+        color: var(--color-white-black);
         margin: 0;
       }
     }
