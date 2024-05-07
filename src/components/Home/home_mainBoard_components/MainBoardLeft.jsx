@@ -1,3 +1,4 @@
+import './main_board_left_components/mainBoardLeft.css'
 export const MainBoardLeft = () => {
   const handleFalseLink = (event) => {
     event.preventDefault();
