@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Home } from "../Home/Home";
 import { LogIn } from "../logIn_components/LogIn";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
@@ -12,6 +12,11 @@ export const NavBar = () => {
     event.preventDefault();
   };
   const { theme, handleTheme } = useContext(ThemeContext);
+  const [imageClassDiv, setImageClassDiv] = useState('mainBoardCenterDark');
+
+  const handleImageClassDiv = (newImageClassDiv) =>{
+    setImageClassDiv(newImageClassDiv);
+  }
 
   const handleOnClick = () => {
     if (theme === "light") {
@@ -68,7 +73,7 @@ export const NavBar = () => {
           </div>
 
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home handleImageClassDiv={handleImageClassDiv} imageClassDiv={imageClassDiv} />} />
             <Route path="/log" element={<LogIn />} />
             <Route path="/register" element={<Register />} />
           </Routes>
