@@ -1,8 +1,14 @@
 import { PropTypes } from "prop-types";
 import { useState } from "react";
+import { AddButton } from "./search_button_components/AddButton";
 
-let showed;
-
+/* let showed; */
+const initialAddedArray = [
+  {
+    name: "No game enter",
+    state: false,
+  },
+];
 export const SButton = ({
   isElement,
   arrayShowed,
@@ -23,10 +29,17 @@ export const SButton = ({
     platform: PropTypes.string,
     search: PropTypes.string,
   };
-  const [isAdded, setIsAdded] = useState(false);
 
+  const [addedArray, setAddedArray] = useState(initialAddedArray);
+  const [isTouched, setIsTouched] = useState(false);
+
+
+  const handleAddedArray = (newAddedArray) =>{
+    setAddedArray(newAddedArray);
+  }
   //Manejando el buscador--------------------------------------------
   const handleSearchNow = () => {
+    setIsTouched(!isTouched);
     console.log(games);
     console.log(`game[0].name${games[0].name}`);
     console.log(`search:${search}`);
@@ -60,17 +73,17 @@ export const SButton = ({
     console.log(`arrayShowed:${arrayShowed}`);
     console.log("El boton fue tocado");
   };
-  const addUser = () => {
+  /* const addUser = () => {
     setIsAdded(!isAdded);
-  };
-  const print = (arrayShowed,isAdded) => {
+  }; */
+  /* const print = (arrayShowed, isAdded) => {
     let output;
     if (isAdded) {
-      output=<p>✔</p>
-    } else{
-      output=<p>+</p>
+      output = <p>✔</p>;
+    } else {
+      output = <p>+</p>;
     }
-    return (
+    showed = (
       <>
         <div className="print">
           <p id="game">{arrayShowed}</p>
@@ -80,15 +93,13 @@ export const SButton = ({
         </div>
       </>
     );
-  };
+  }; */
 
   return (
     <>
-      {print(arrayShowed,isAdded)}
-      {showed}
-
-      {/* {arrayShowed}
-      <button className="sumB" >+</button> */}
+      {/* {print(arrayShowed, isAdded)}
+      {showed} */}
+      <AddButton isTouched={isTouched} arrayShowed={arrayShowed} addedArray={addedArray} handleAddedArray={handleAddedArray}  />
       <button className="clickB" onClick={handleSearchNow}>
         <b>Search Now</b>
       </button>
