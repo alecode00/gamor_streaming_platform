@@ -80,7 +80,7 @@ export const AddButton = ({
         console.log(
           `arrayShowed: ${arrayShowed} addedArray[index].name: ${addedArray[index].name}`
         );
-        if (arrayShowed[0].trim() === addedArray[index].name.toString()) {
+        if (arrayShowed[0] === addedArray[index].name.toString()) {
           setIsAdded(addedArray[index].state);
           setIndexArray(index);
           isFounded = true;
