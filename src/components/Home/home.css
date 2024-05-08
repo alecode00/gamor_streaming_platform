@@ -10,6 +10,9 @@ section {
   width: 30%;
 }
 .mainBoardCenterLight {
+  h2{
+    color: var(--color-white-white);
+  }
   background-image: url("./home_mainBoard_components/main_board_center_components/VioletPicOfFortnite.jpg");
   background-size: 100% 100%;
   .clock_container {
@@ -28,6 +31,9 @@ section {
   text-align: center;
 }
 .mainBoardCenterDark {
+  h2{
+    color: var(--color-white-white);
+  }
   background-image: url("./home_mainBoard_components/main_board_center_components/OrangePicOfFortnite5.jpg");
   background-size: 100% 100%;
   .clock_container {
