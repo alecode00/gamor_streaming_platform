@@ -26,7 +26,7 @@ section {
     color: var(--color-orange-purple);
   }
   #join {
-    color: var(--color-hardOrange-hardPurple);
+    color: var(--color-hardOrange-easyPurple);
   }
   text-align: center;
 }
@@ -47,7 +47,7 @@ section {
     color: var(--color-orange-purple);
   }
   #join {
-    color: var(--color-hardOrange-hardPurple);
+    color: var(--color-hardOrange-easyPurple);
   }
   text-align: center;
 }

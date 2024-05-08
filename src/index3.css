@@ -15,7 +15,7 @@
   --color-easyBlack-easyBlack: rgb(115, 120, 120);
   --color-mediumBlack2-white: white;
   --color-hardBlack-easyBlack: rgb(115, 120, 120);
-  --color-hardOrange-hardPurple: rgb(105, 0, 105);
+  --color-hardOrange-easyPurple: rgb(201, 57, 201);
   --color-hardBlack-white: white;
   --color-mediumBlack-mainWhite: rgb(235, 235, 235);
   --color-white-black: #1a1a1a;
@@ -35,7 +35,7 @@
   --color-easyBlack-easyBlack: rgb(115, 120, 120);
   --color-mediumBlack2-white: #454545;
   --color-hardBlack-easyBlack: #1c2020;
-  --color-hardOrange-hardPurple: rgb(190, 51, 0);
+  --color-hardOrange-easyPurple: rgb(190, 51, 0);
   --color-hardBlack-white: #1c2020;
   --color-mediumBlack-mainWhite: #232727;
   --color-white-black: white;
@@ -53,7 +53,7 @@ body {
 @media screen and (max-width: 780px) {
   .mainBoard1 {
     flex-direction: column;
-    width: 90vw;
+    width: 93vw;
     height: max-content;
   }
   .mainBoardCenterLight {
