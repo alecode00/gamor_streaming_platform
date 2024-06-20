@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { PlatformSelector } from "./main_board_right_components/PlatformSelector";
 import { Searcher } from "./main_board_right_components/Searcher";
 import { SButton } from "./main_board_right_components/SButton";
-import './main_board_right_components/mainBoardRigth.css'
+import "./main_board_right_components/mainBoardRigth.css";
 
 const API_KEY = "95c3e55f582e4cc68d3d54bbe54bbd35";
 const url_base = "https://api.rawg.io/api/games";
@@ -40,7 +40,6 @@ export const MainBoardRight = ({ category }) => {
     try {
       const response = await fetch(`${url_base}?key=${API_KEY}`);
       const data = await response.json();
-      console.log(`data.results: ${data.results}`);
       setGames(data.results);
     } catch (error) {
       console.error(error);

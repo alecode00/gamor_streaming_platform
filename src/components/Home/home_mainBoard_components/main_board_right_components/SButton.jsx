@@ -36,9 +36,6 @@ export const SButton = ({
   //Manejando el buscador--------------------------------------------
   const handleSearchNow = () => {
     setIsTouched(!isTouched);
-    console.log(games);
-    console.log(`game[0].name${games[0].name}`);
-    console.log(`search:${search}`);
 
     for (let i = 0; i < games.length; i++) {
       if (
@@ -48,12 +45,8 @@ export const SButton = ({
         games.length === 0 */
       ) {
         handleArrayShowed([games[i].name]);
-        console.log("Estoy asignando arrayShoewed en 1:");
       }
     }
-
-    console.log(`arrayShowed:${arrayShowed}`);
-    console.log("El boton fue tocado");
   };
   return (
     <>

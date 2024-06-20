@@ -22,9 +22,8 @@ export const AddButton = ({
   }, [isTouched]);
 
   const addUser = () => {
-    console.log(`Entre en addUser`);
     setIsAdded(!isAdded);
-    console.log(`Setee el estado contrario`);
+
     const nextAddedArray = addedArray.map((c, i) => {
       if (i == indexArray) {
         return (c = {
@@ -35,7 +34,7 @@ export const AddButton = ({
         return c;
       }
     });
-    console.log(`${nextAddedArray}`);
+
     handleAddedArray(nextAddedArray);
   };
 
@@ -60,9 +59,8 @@ export const AddButton = ({
 
   const verify = () => {
     let isFounded = false;
-    console.log("Entre al verify");
+
     if (addedArray.length == 1) {
-      console.log("El lenght fue 1");
       setIsAdded(false);
       setIndexArray(addedArray.length);
       handleAddedArray([
@@ -72,14 +70,8 @@ export const AddButton = ({
           state: false,
         },
       ]);
-      console.log("Actualice mis estados");
     } else {
-      console.log("El lenght NO fue 1");
       for (let index = 0; index < addedArray.length; index++) {
-        console.log(`El lenght de mi addedArray es: ${addedArray.length} `);
-        console.log(
-          `arrayShowed: ${arrayShowed} addedArray[index].name: ${addedArray[index].name}`
-        );
         if (arrayShowed[0] === addedArray[index].name.toString()) {
           setIsAdded(addedArray[index].state);
           setIndexArray(index);
@@ -87,7 +79,6 @@ export const AddButton = ({
         }
       }
       if (isFounded == false) {
-        console.log(`No encontrado actualizando los estados `);
         setIsAdded(false);
         setIndexArray(addedArray.length);
         handleAddedArray([

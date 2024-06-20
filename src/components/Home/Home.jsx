@@ -48,7 +48,6 @@ export const Home = ({ handleImageClassDiv, imageClassDiv }) => {
       </div>
       <section className="trendingCategories">
         <TrendingCategories handleChangeCategory={handleChangeCategory} />
-        {console.log(`La categoria seleccionada es: ${category}`)}
       </section>
     </>
   );
